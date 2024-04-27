@@ -10,12 +10,12 @@ Usage
 python fallout.py
 ```
 
-or for hard mode where the user must manually enter the correct input in the
-boot and login scripts
+If you want an extra challenge, you could do hard mode, where the user must manually enter the correct input in the boot and login scripts. Accessible with the `--hard` flag.
 
-```
-python fallout.py hard
-```
+You can also skip the password entry entirely if you'd prefer, by adding `--skip` to the flags.
+
+And if you'd like to preload sounds, in case of playback issues, add `--preload` to the flags.
+
 
 Passwords
 ================
