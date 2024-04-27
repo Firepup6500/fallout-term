@@ -40,6 +40,7 @@ def makeSelection(scr, SELECTIONS, MSGS):
         elif inchar == curses.KEY_DOWN and selection < selection_count - 1:
             selection += 1
             addSound("keyenter")
+    addSound("keyenter")
     if MSGS and MSGS[selection]:
         whole_line = '> ' + MSGS[selection]
         space = width - len(whole_line) % width
@@ -48,7 +49,6 @@ def makeSelection(scr, SELECTIONS, MSGS):
         scr.addstr(whole_line)
         scr.refresh()
         sleep(2)
-    addSound("keyenter")
     return selection
 
 
