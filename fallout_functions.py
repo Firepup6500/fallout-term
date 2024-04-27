@@ -122,7 +122,7 @@ def _playQueue():
             sleep(0.02)
 
 
-def isQueueEmpty():
+def queueIsEmpty():
     """
     Check if the sound queue is empty
     """
@@ -143,7 +143,7 @@ def soundTest():
     addSound("poweroff")
     addSound("poweroff")
     global _soundQueue
-    while not isQueueEmpty():
+    while not queueIsEmpty():
         sleep(0.2)
 
 

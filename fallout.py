@@ -5,7 +5,7 @@ import fallout_locked as locked
 import fallout_hack as hack
 import fallout_selection as select
 import fallout_data as data
-from fallout_functions import soundTest, isQueueEmpty, addSound
+from fallout_functions import soundTest, queueIsEmpty, addSound
 from time import sleep
 import sys
 
@@ -22,10 +22,10 @@ if '--preload' in sys.argv:
 
 try:
     addSound("poweron")
-    while not isQueueEmpty():
+    while not queueIsEmpty():
         sleep(0.2)
     if skip or boot.beginBoot(hard):
-        while not isQueueEmpty():
+        while not queueIsEmpty():
             sleep(0.2)
         pwd = None
         if not skip:
@@ -34,12 +34,12 @@ try:
             pwd = "VERYVERYSECUREPASSWORD"
         if pwd != None:
             login.beginLogin(hard, 'ADMIN', pwd)
-            while not isQueueEmpty():
+            while not queueIsEmpty():
                 sleep(0.2)
             sel = 0
             while sel != 3:
                 sel = select.beginSelection(data.ROBCO_HEADERS, data.SOFT_HEADERS, data.MAIN_MENU)
-                while not isQueueEmpty():
+                while not queueIsEmpty():
                     sleep(0.2)
                 if   sel == 0:
                     loc = 0
@@ -78,5 +78,5 @@ except KeyboardInterrupt:
     pass
 
 addSound("poweroff")
-while not isQueueEmpty():
+while not queueIsEmpty():
 	sleep(0.2)
