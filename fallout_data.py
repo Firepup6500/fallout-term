@@ -218,6 +218,64 @@ attn: Warehouse/Repair employees
 Please make sure the main platform in the Repair Sector is properly raised before releasing the repaired bots from their pods. All units receive fimware programming to make their way to the main entrance and await pickup. Let's get them there safely and not repeat last week's accident involving a Protectron falling to the lower level. That error cost us time, money, and was an embarrassment to the company and our DCTA account client.
 
 -- Management""",
+   'L.O.B. Enterprises - Email: Weapon Practice Tonight?': """From: McCoy, Derrick
+To: Entire Company
+
+Subject: Weapon Practice Tonight?
+
+If anyone would like to practice with their "low-grade, military-class" company issue, Sam and I will be shooting rounds off in the yard at 7:00PM.
+
+BYOB.""",
+    'L.O.B. Enterprises - Re: Weapon Practice': """From: McAndrews, Jeanne
+To: McCoy, Derrick
+Subject: Re: Weapon Practice Tonight?
+Sure, I'll definitely be there. I wouldn't miss a chance to have my weapon accidentally discharge and hit that "grenade" in Sam's pocket.""",
+    'L.O.B. Enterprises - Sent Item: MAN THE DOORS!!': """From: Warring, Joanna
+To: Entire Company
+
+Subject: Oh, !@#
+
+THEY'RE HERE! MAN THE DOORS! THE FEDS ARE HERE!""",
+    'L.O.B. Enterprises - All Personnel: Caps in Emails': """From: Director of Human Resources
+To: Entire Company
+
+Subject: Caps in Emails
+
+I would like to remind everyone that, despite the impending Federal invasion, standard company policy is still in effect.
+
+Specifically, do not write emails in all caps. This style is offensive to your coworkers.
+
+Thank you for your cooperation.""",
+    'L.O.B. Enterprises - Memo: Responding to Federal Raids': """Internal Memorandum
+
+Due to the increased awareness of our upcoming project milestone, you and your fellow employees may be required to initiate Emergency Defensive Procedures, as outlined in the Employee Handbook. If required, please review policies #H31, #L04, #L05, #P55, #T01.
+
+Your continued adherence to company policy is appreciated.""",
+    'L.O.B. Enterprises - Weapons Policy #H31': """Weapons Policy #H31
+
+As standard policy, all employees are required to carry low-grade military-class weaponry at all times (see HR Policy#A12). In the event of a hostile takeover, your desk can be used as a makeshift barricade. Position the desk between yourself and your opponent, then crouch behind the desk while firing any weapon approved on Form B43-2.
+
+NOTE: Cafeteria privileges will be suspended in the event of a hostile takeover.""",
+    'L.O.B. Enterprises - Evacuation Policy #T01': """Evacuation Policy #T01
+
+In the event of emergency evacuation scenario F1-a, all executive staff not under penalty are to be evacuated from the building via the archives and connected civic tunnels. All other personnel will remain behind to safeguard active projvects{sic} from imminent Federal inquiry.
+
+All employees are tasked with barricading the main doors, and will be further tasked with keeping the building secured until 5:00 PM, or until the Chief of Security enacts protocol #T81. The usual lunch break will be suspended for that day.""",
+    'L.O.B. Enterprises - Inclement Weather Policy #C31': """Inclement Weather Policy #C31
+
+In the event of extreme winter (nuclear) conditions, all employees are required to proceed to human resources and complete forms D87-a, D87-b, H04-1, and A14-3, addendum 7. In accordance with company policy #L83, employees will be issued iodine tablets, personal geiger counter, meal rations, and sworn into the sovereign L.O.B. republic.""",
+    'L.O.B. Enterprises - Lab Report: Prototype ZRIN-363': """Lab Report: Prototype ZRIN-363
+
+Experimental prototype makes extensive use of hardware common to liquid ammunition flame projection weapons. While initial test results were impressive, extreme weight of unit (118.3kg) and fume inhalation rendered most test subjects incapable of firing the unit or remaining conscious under typical field conditions.""",
+    'L.O.B. Enterprises - Lab Report: Prototype ZRIN-375': """Lab Report: Prototype ZRIN-375
+
+Prototype introduces proprietary ammunition type. Conventional 10mm shells house a caplet containing amalgamating agents. When the caplet was broken in lab tests, localized fireburst and shrapnel projection met requirements for project. However, in field tests amalgam caplet ammunition proved too fragile, and several detonated from excessive vibration or walk speed.""",
+    'L.O.B. Enterprises - Lab Report: Prototype ZRIN-401': """Lab Report: Prototype ZRIN-401
+
+Prototype attempts to refine results of acumist coating within weapon barrel. Initial tests showed promise. As predicted, delivery friction super-heats projectile as it is delivered from the weapon, and conventional 10mm ammunition can be used. However; during live-fire testing, subjects firing the weapon in rapid succession suffered severe burns to the fingers and palm.""",
+    'L.O.B. Enterprises - Lab Report: Prototype ZRIN-418': """Lab Report: Prototype ZRIN-418
+
+Prototype refines acumist barrel experiments by addition of retardant jacketing, as well as internal heat diffusers. Rate of fire diminished from un-modified version of weapon. Conventional 10mm ammunition does not fully liquefy until impact, giving the 418 exceptional accuracy compared to earlier prototypes. Live-fire tests report no major casualties. Recommend ZRIN-418 as production candidate.""",
 
 }
 
