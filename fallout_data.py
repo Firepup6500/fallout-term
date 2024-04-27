@@ -200,7 +200,17 @@ According to Germantown police chief Joseph Field, the Pint-Sized Slasher may be
 Add to the sinister forensic findings this statement from Christopher Atkinson, the one surviving victim of the adolescent assassin, and it becomes clear that the Pint-Sized Slasher does indeed walk among us: "The clown! The clown! He's going to kill us all, do you understand me? He stabbed my brother Shaun right in the face! He killed my brother! The little clown!"
 
 But assuming the Pint-Sized Slasher is indeed a real, tangible threat to the peace loving residents of D.C. suburbia, one question remains: why? What could possible motivate a child to don a clown mask and murder innocent people in cold blood? We may never know. At least not until the miniature maniac is brought to justice. Until then, all we can do is lock our doors, kiss our children goodnight… and pray they live to see morning.""",
+    'Robot Repair Center - Note From Frank': """I can't take it anymore, Bob. I don't trust those turrets in Sector A. I swear I saw one track me the other day when I left work a little late. If that thing opens up on me, I'm screwed, since the bastard Feds suspended workman's comp as part of the "war effort." Hell.
 
+Snake helped me smuggle in some pulse grenades that I locked away in the box under my desk. I tried one out on our Handy at the house and the missus nearly killed me! Knocks 'em out like a light. If you ever need one just grab the key from behind my terminal and use it to unlock the box. You can't say I never did anything for you! See you around buddy.
+
+Oh, and stop throwing those staples over at me, they get on the floor and you know how I like to take my shoes off during the day.""",
+    'Robot Repair Center - Note from Management regarding Sector B': """<MEMO>
+attn: Warehouse/Repair employees
+
+Please make sure the main platform in the Repair Sector is properly raised before releasing the repaired bots from their pods. All units receive fimware programming to make their way to the main entrance and await pickup. Let's get them there safely and not repeat last week's accident involving a Protectron falling to the lower level. That error cost us time, money, and was an embarrassment to the company and our DCTA account client.
+
+-- Management""",
 
 }
 
