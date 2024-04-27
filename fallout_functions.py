@@ -81,13 +81,13 @@ def upperInput(window, hidden = False, can_newline = True):
             window.addch(NEWLINE)
     return instr
 
-def centeredWrite(window, text, pause = LETTER_PAUSE):
+def centeredWrite(window, text, pause = LETTER_PAUSE, silent = False):
     """
     Writes to the current line but centers the text
     """
     width = window.getmaxyx()[1]
     window.move(window.getyx()[0], int(width / 2 - len(text) / 2))
-    slowWrite(window, text, pause)
+    slowWrite(window, text, pause, silent = silent)
 
 
 def _soundCheck():

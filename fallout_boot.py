@@ -21,13 +21,15 @@ MESSAGE_1 = 'WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK'
 
 MESSAGE_2 = 'RIT-V300'
 
-MESSAGE_3 = 'Initializing Robco Industries(TM) MF Boot Agent v2.3.0\n' \
-            'RETROS BIOS\n' \
-            'RBIOS-4.02.08.00 52EE5.E7.E8\n' \
-            'Copyright 2201-2203 Robco Ind.\n' \
-            'Uppermem: 64 KB\n' \
-            'Root (5A8)\n' \
-            'Maintenance Mode'
+MESSAGE_3 = [
+    '\nInitializing Robco Industries(TM) MF Boot Agent v2.3.0\n',
+    'RETROS BIOS\n',
+    'RBIOS-4.02.08.00 52EE5.E7.E8\n',
+    'Copyright 2201-2203 Robco Ind.\n',
+    'Uppermem: 64 KB\n',
+    'Root (5A8)\n',
+    'Maintenance Mode\n\n'
+]
 
 
 ######################## functions #######################
@@ -78,7 +80,8 @@ def runBoot(scr, hardMode):
         curses.napms(INPUT_PAUSE)
         slowWrite(scr, ENTRY_3 + '\n', TYPE_DELAY, True)
 
-    slowWrite(scr, '\n' + MESSAGE_3 + '\n\n')
+    for LINE in MESSAGE_3:
+       slowWrite(scr, LINE)
 
     if hardMode:
         entry = ''
