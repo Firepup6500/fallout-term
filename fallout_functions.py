@@ -152,7 +152,7 @@ def addSound(file):
     Add sounds to the queue
     """
     global _soundQueue
-    if soundCheck():
+    if _soundCheck():
         _soundQueue.extend([file])
 
 
