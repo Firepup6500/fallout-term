@@ -28,17 +28,17 @@ _soundQueue = []
 global _queueRunning
 _queueRunning = False
 
-def slowWrite(window, text, pause = LETTER_PAUSE, fake_user = False):
+def slowWrite(window, text, pause = LETTER_PAUSE, fake_user = False, silent = False):
     """
     wrapper for curses.addstr() which writes the text slowly
     """
-    if not fake_user:
+    if not fake_user and not silent:
         addSound("beep")
     for i in range(len(text)):
         window.addstr(text[i])
         window.refresh()
         curses.napms(pause)
-    if fake_user:
+    if fake_user and not silent:
         _playSound("keyenter", True)
 
 def upperInput(window, hidden = False, can_newline = True):

@@ -43,7 +43,7 @@ def generateHex(n):
         num += 12
     return list
 
-    
+
 def getSymbols(n):
     """
     return n random symbols
@@ -64,7 +64,7 @@ def getPasswords():
     # script file / password file location
     __location__ = os.path.realpath(os.path.join(os.getcwd(),
                                                  os.path.dirname(__file__)))
-    
+
     # read from passwords.txt
     with open(os.path.join(__location__, "passwords.txt")) as pwfile:
         for line in pwfile:
@@ -87,7 +87,7 @@ def getFiller(length, passwords):
     passwords - an array of passwords to hide in the symbols
     """
     filler = getSymbols(length)
-    
+
     # add the passwords to the symbols
     pwdLen = len(passwords[0])
     pwdCount = len(passwords)
@@ -99,12 +99,12 @@ def getFiller(length, passwords):
         filler = filler[:i] + pwd + filler[i + pwdLen:]
         i += pwdLen
     return filler
-    
+
 
 def initScreen(scr):
     """
     Fill the screen to prepare for password entry
-    
+
     scr - curses window returned from curses.initscr()
     """
     size = scr.getmaxyx()
@@ -122,12 +122,12 @@ def initScreen(scr):
     passwords = getPasswords()
     filler = getFiller(fillerLength, passwords)
     fillerCol1, fillerCol2 = filler[0:len(filler)//2], filler[len(filler)//2:]
-	
+
     #print(fillerCol1)
     #time.sleep(15)
     #print(fillerCol2)
     #time.sleep(15)
-    
+
     # each column of symbols and passwords should be 1/4 of the screen
     fillerWidth = int(width / 4)
 
@@ -142,13 +142,13 @@ def initScreen(scr):
 
     # print the hex and filler
     for i in range(fillerHeight):
-        slowWrite(scr, "0x%X %s" % (hexCol1[i], fillerCol1[i * fillerWidth: (i + 1) * fillerWidth]), 1)
+        slowWrite(scr, "0x%X %s" % (hexCol1[i], fillerCol1[i * fillerWidth: (i + 1) * fillerWidth]), 1, silent = True)
         if i < fillerHeight - 1:
             scr.addstr('\n')
 
     for i in range(fillerHeight):
         scr.move(HEADER_LINES + i, int(CONST_CHARS / 2 + fillerWidth))
-        slowWrite(scr, '0x%X %s' % (hexCol2[i], fillerCol2[i * fillerWidth: (i + 1) * fillerWidth]), 1)
+        slowWrite(scr, '0x%X %s' % (hexCol2[i], fillerCol2[i * fillerWidth: (i + 1) * fillerWidth]), 1, silent = True)
 
     scr.refresh()
 
