@@ -14,8 +14,9 @@ If you want an extra challenge, you could do hard mode, where the user must manu
 
 You can also skip the password entry entirely if you'd prefer, by adding `--skip` to the flags.
 
-And if you'd like to preload sounds, in case of playback issues, add `--preload` to the flags.
+If you'd like to preload sounds, in case of playback issues, add `--preload` to the flags.
 
+Finally, if you'd prefer not to have sound, you may add `--no-sound` to the flags.
 
 Passwords
 ================
