@@ -30,7 +30,7 @@ _queueRunning = False
 
 def slowWrite(window, text, pause = LETTER_PAUSE, fake_user = False):
     """
-    wrapper for curses.addstr() which writes the text slowely 
+    wrapper for curses.addstr() which writes the text slowly
     """
     if not fake_user:
         addSound("beep")
