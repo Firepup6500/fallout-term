@@ -276,7 +276,53 @@ Prototype attempts to refine results of acumist coating within weapon barrel. In
     'L.O.B. Enterprises - Lab Report: Prototype ZRIN-418': """Lab Report: Prototype ZRIN-418
 
 Prototype refines acumist barrel experiments by addition of retardant jacketing, as well as internal heat diffusers. Rate of fire diminished from un-modified version of weapon. Conventional 10mm ammunition does not fully liquefy until impact, giving the 418 exceptional accuracy compared to earlier prototypes. Live-fire tests report no major casualties. Recommend ZRIN-418 as production candidate.""",
+    'Vault 101          - CONFIDENTIAL': """CONFIDENTIAL!
+TOP-LEVEL SECURITY ONLY!
 
+From: Chief Officer
+Subject: Raid on Rebels
+
+In light of increased agitation from the rebel elements, I have come to the conclusion that we can no longer afford to be merciful to this scum. While some may hold out hope for a peaceful resolution, it's only a matter of time before they decide to take the fight to us. Or, worse yet, our families.
+
+I propose a midnight raid into their compound - live ammo, zero tolerance. Make an example of the first two who fight back, and the rest will fall in line. We may lose a kid or two, but we'll save the Vault as a whole, and that's what counts.
+
+You are not to inform the Overseer and some of our softer security guards about this plan, as they will only object and ensure our defeat. Once the deal's done, they'll see it was worth the price.
+
+This'll show those scum what happens when you step out of line in our Vault.""",
+    'Vault 101          - Report 2241-02-10': """As our tests suggested, the immediate vicinity of the vault is no longer dangerously irradiated, although the background radiation is still well above safe levels. Pockets of more intense radiation appear to still be common, and all surface water seems to be undrinkable. We will need to carry ample supplies of Rad-X with us on all future surveys. But hazard suits do not seem to be necessary for general exploration.
+
+Our old maps are largely useless. The town of Springvale is an abandoned ruin, and all pre-War roads have disappeared or are no longer passable.
+
+We encountered a group of monstrous ants which appeared to confirm Mackay's theories of mutation due to extended exposure to radiation. We drove off the ants with gunfire and collected several specimens for study upon return to the vault (see Exhibit A).
+
+The good news is that human civilization still survives, despite everything! We discovered a settlement known as "Megaton" (see Exhibit B), whose inhabitants, although somewhat wary at first, soon welcomed us into their town.
+
+We spent a good deal of time in Megaton, and learned a great deal about the "Capital Wasteland" (as the area around Washington D.C. is now called) from them. Megaton is a fortified outpost of "civilization" (of sorts), but it seems that Giant Ants are the least of the dangers of this new world. We agreed that it was prudent to return to the Vault immediately to revise our survey plans in light of what we have learned. Lewis and Agnes remained in Megaton to serve as "ambassadors" and continue to collect information until we return.
+
+Anne Palmer, Survey Team Leader
+February 10, 2241""",
+    'Vault 101          - Vault-tec Instructions': """A Letter to the Overseer from Dr. Stanislaus Braun:
+
+If you are reading this, emergency Vault internment procedures have been initiated and you and your control group have been sealed into your Vault. Congratulations! You are now a vital part of the most ambitious program ever undertaken by Vault-Tec.
+
+If you have not yet read your sealed orders, do so now. They will outline the experimental protocols assigned to your control group. Please remember that deviation from these protocols in any way will jeopardize the success of the program, and may be considered grounds for termination by Vault-Tec Corporation (as outlined in your Employment Agreement).
+
+Your Vault may or may not have been selected to receive a G.E.C.K. module. Please see Attachment A for details.
+
+Doctor Stanislaus Braun
+Director, Societal Preservation Program
+Vault-Tec Corporation""",
+    'Vault 101          - Attachment A': "Vault 101 will not receive a G.E.C.K. module, and should operate under the guidelines laid forth in the Overseer's sealed orders.",
+    'Vault 101          - Vault-Tec Scientific Entry: The G.E.C.K.": """The G.E.C.K. is, quite simply, the most advanced piece of technology ever developed by Vault-Tec -- a terraforming module capabilityIn-game spelling, punctuation and/or grammar of creating life from complete lifelessness.
+
+After riding out the storm of nuclear Armageddon in a Vault-Tec patented vault, residents can then activate the G.E.C.K., and create a new Earthen paradise -- craters and dust will give way to rolling grasslands and sparkling clear water. Of course, due to time and monetary constraints, not every vault will be equipped with a G.E.C.K. module.""",
+    'Vault 101          - External Contact Report': """The Vault recently received unexpected radio contact over the governmental Vault-Tec frequency, from an organization calling itself "The Enclave."
+
+Governmental codes are valid according to the Vault's ancient records, and The Enclave put forth an offer of amnesty and unity with the official remnants of the American government, in exchange for access to the Vault and its data stores. They claim that our Vault passwords no longer match their records, preventing them from extending their offer in person.
+
+After brief negotiation, I have refused entrance to this "Enclave." I cannot trust my Vault and its inhabitants to an unknown factor, much less one that would so gallantly suggest abandoning our vault's great mission.
+
+All the more reason to prevent the rebels from opening the Vault to the likes of them."""
 }
 
 LOG_NAMES = list(LOGS.keys())
