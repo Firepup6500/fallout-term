@@ -45,7 +45,7 @@ def runBoot(scr, hardMode):
 
     curses.noecho()
     scr.scrollok(True)
-    
+
     slowWrite(scr, MESSAGE_1 + '\n\n')
 
     if hardMode:
@@ -89,7 +89,7 @@ def runBoot(scr, hardMode):
         slowWrite(scr, '>')
         curses.napms(INPUT_PAUSE)
         slowWrite(scr, ENTRY_4 + '\n', TYPE_DELAY, True)
-        
+
     curses.napms(INPUT_PAUSE)
     return True
 
