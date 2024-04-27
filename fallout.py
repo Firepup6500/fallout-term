@@ -70,7 +70,9 @@ try:
                     while log != data.LOG_RET_ID:
                         log = select.beginSelection(data.ROBCO_HEADERS, data.SOFT_HEADERS, data.LOG_NAMES)
                         if log != data.LOG_RET_ID:
-                            select.beginSelection(data.ROBCO_HEADERS, data.LOGS[data.LOG_NAMES[log]].split("\n"), ["Return"])
+                            LOG = data.LOGS[data.LOG_NAMES[log]].split("\n")
+                            LOG.extend([''])
+                            select.beginSelection(data.ROBCO_HEADERS, LOG, ["Return"])
         else:
             locked.beginLocked()
             print('Login failed')
