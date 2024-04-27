@@ -114,7 +114,7 @@ def _playQueue():
     if _queueRunning:
         return
     _queueRunning = True
-    while 1:
+    while _soundCheck():
         if len(_soundQueue) > 0:
             _playSound(_soundQueue[0], True)
             _soundQueue.pop(0)
@@ -152,7 +152,8 @@ def addSound(file):
     Add sounds to the queue
     """
     global _soundQueue
-    _soundQueue.extend([file])
+    if soundCheck():
+        _soundQueue.extend([file])
 
 
 _queueMgr = Thread(target=_playQueue)
