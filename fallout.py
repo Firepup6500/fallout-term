@@ -17,7 +17,7 @@ skip = False
 if '--skip' in sys.argv:
     skip = True
 
-if '--skip-preload' not in sys.argv:
+if '--preload' in sys.argv:
     soundTest()
 
 try:
