@@ -1,1 +1,4 @@
 *.pyc
+original**
+test**
+__pycache__**

@@ -1,33 +1,10 @@
 import curses
-from fallout_functions import slowWrite
-from fallout_functions import centeredWrite
-from fallout_functions import NEWLINE
-
-####################### text strings ########################
-
-CENTERED_HEADERS = (
-    'ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM',
-    'COPYRIGHT 2075-2077 ROBCO INDUSTRIES',
-    '-SERVER 6-',
-    ''
-)
-
-OTHER_HEADERS = (
-    '\tSoftLock Solutions, Inc',
-    '"Your Security is Our Security"',
-    '>\\ Welcome, USER',
-    ''
-)
-
-SELECTIONS = (
-    'Disengage Lock',
-    'Deactivate Turrets',
-    'Read Log'
-)
+from time import sleep
+from fallout_functions import slowWrite, centeredWrite, NEWLINE, addSound
 
 ###################### Functions ############################
 
-def makeSelection(scr):
+def makeSelection(scr, SELECTIONS, MSGS):
     """
     ALlow the user to select an option
     Returns the line number of the users selection starting at 0
@@ -37,7 +14,7 @@ def makeSelection(scr):
     selection_count = len(SELECTIONS)
     selection_start_y = scr.getyx()[0]
     width = scr.getmaxyx()[1]
-    
+
     while inchar != NEWLINE:
         # move to start of selections and hightlight current selection
         scr.move(selection_start_y, 0)
@@ -46,7 +23,7 @@ def makeSelection(scr):
             whole_line = '> ' + SELECTIONS[line]
             space = width - len(whole_line) % width
             whole_line += ' ' * space
-            
+
             if line == selection:
                 scr.addstr(whole_line, curses.A_REVERSE)
             else:
@@ -59,13 +36,23 @@ def makeSelection(scr):
         # move up and down
         if inchar == curses.KEY_UP and selection > 0:
             selection -= 1
+            addSound("keyenter")
         elif inchar == curses.KEY_DOWN and selection < selection_count - 1:
             selection += 1
-
+            addSound("keyenter")
+    if MSGS and MSGS[selection]:
+        whole_line = '> ' + MSGS[selection]
+        space = width - len(whole_line) % width
+        whole_line += ' ' * space
+        scr.addstr(' ' * width)
+        scr.addstr(whole_line)
+        scr.refresh()
+        sleep(2)
+    addSound("keyenter")
     return selection
-        
 
-def runSelection(scr):
+
+def runSelection(scr, CENTERED_HEADERS, OTHER_HEADERS, OPTIONS, MESSAGES):
     """
     Print the selections and allow the user to select one
     """
@@ -87,11 +74,11 @@ def runSelection(scr):
         scr.addch(curses.ACS_BSBS)
     scr.refresh()
 
-    return makeSelection(scr)
+    return makeSelection(scr, OPTIONS, MESSAGES)
 
-def beginSelection():
+def beginSelection(center, other, options, messages = []):
     """
     Initialize curses and start the boot process
     """
-    res = curses.wrapper(runSelection)
+    res = curses.wrapper(runSelection, center, other, options, messages)
     return res

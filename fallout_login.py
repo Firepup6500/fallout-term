@@ -47,7 +47,7 @@ def runLogin(scr, hardMode, username, password):
         # input is entered for them
         slowWrite(scr, '> ')
         curses.napms(INPUT_PAUSE)
-        slowWrite(scr, ENTRY + username.upper() + '\n', TYPE_DELAY)
+        slowWrite(scr, ENTRY + username.upper() + '\n', TYPE_DELAY, True)
 
     slowWrite(scr, '\n' + PASSWORD_PROMPT + '\n\n')
 
@@ -65,7 +65,7 @@ def runLogin(scr, hardMode, username, password):
         slowWrite(scr, '> ')
         curses.napms(INPUT_PAUSE)
         password_stars = HIDDEN_MASK * len(password)
-        slowWrite(scr, password_stars + '\n', TYPE_DELAY)
+        slowWrite(scr, password_stars + '\n', TYPE_DELAY, True)
 
     curses.napms(500)
 

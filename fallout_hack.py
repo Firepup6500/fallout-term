@@ -2,8 +2,7 @@ import curses
 import random
 import time
 import os
-from fallout_functions import slowWrite
-from fallout_functions import upperInput
+from fallout_functions import slowWrite, upperInput, addSound
 
 ################## text strings ######################
 
@@ -23,7 +22,7 @@ LOGIN_ATTEMPTS = 4
 HEADER_LINES = 5
 
 # amount of time to pause after correct password input
-LOGIN_PAUSE = 3000
+LOGIN_PAUSE = 3
 
 # starting number for hex generation
 START_HEX = 0xf650
@@ -212,6 +211,8 @@ def userInput(scr, passwords):
 
         # user got password right
         if guess.upper() == pwd.upper():
+            
+            addSound("correctpass")
             inputPad.addstr('>Exact match!\n')
             inputPad.addstr('>Please wait\n')
             inputPad.addstr('>while system\n')
@@ -219,7 +220,7 @@ def userInput(scr, passwords):
 
             moveInput(scr, inputPad)
 
-            curses.napms(LOGIN_PAUSE)
+            time.sleep(LOGIN_PAUSE)
             return pwd
             
         # wrong password
@@ -233,6 +234,7 @@ def userInput(scr, passwords):
             except IndexError:
                 pass # user did not enter enough letters
                 
+            addSound("wrongpass")
             inputPad.addstr('>Entry denied\n')
             inputPad.addstr('>' + str(matched) + '/' + str(pwdLen) +
                             ' correct.\n')

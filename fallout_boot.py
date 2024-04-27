@@ -58,7 +58,7 @@ def runBoot(scr, hardMode):
         # input is entered for them
         slowWrite(scr, '>')
         curses.napms(INPUT_PAUSE)
-        slowWrite(scr, ENTRY_1 + '\n', TYPE_DELAY)
+        slowWrite(scr, ENTRY_1 + '\n', TYPE_DELAY, True)
 
     slowWrite(scr, '\n' + MESSAGE_2 + '\n\n')
 
@@ -73,10 +73,10 @@ def runBoot(scr, hardMode):
     else:
         slowWrite(scr, '>')
         curses.napms(INPUT_PAUSE)
-        slowWrite(scr, ENTRY_2 + '\n', TYPE_DELAY)
+        slowWrite(scr, ENTRY_2 + '\n', TYPE_DELAY, True)
         slowWrite(scr, '>')
         curses.napms(INPUT_PAUSE)
-        slowWrite(scr, ENTRY_3 + '\n', TYPE_DELAY)
+        slowWrite(scr, ENTRY_3 + '\n', TYPE_DELAY, True)
 
     slowWrite(scr, '\n' + MESSAGE_3 + '\n\n')
 
@@ -88,7 +88,7 @@ def runBoot(scr, hardMode):
     else:
         slowWrite(scr, '>')
         curses.napms(INPUT_PAUSE)
-        slowWrite(scr, ENTRY_4 + '\n', TYPE_DELAY)
+        slowWrite(scr, ENTRY_4 + '\n', TYPE_DELAY, True)
         
     curses.napms(INPUT_PAUSE)
     return True
