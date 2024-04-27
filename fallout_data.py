@@ -136,8 +136,70 @@ The tag line will be "Take the leap... enjoy a Quantum!" """,
 In this final stage we will aggressively compare the drink to other competitors and show their inferiority using hired actors at "taste tests". The actors will read pre-written scripts approved by our department. The text should give an authentic "on the spot" impression but still clearly point out Quantum's strengths.
 
 The tag line will remain: "Take the leap... enjoy a Quantum!" """,
+    'Capitol Post - Commies Crushed - Alaska Liberated!': """By Dorothy Proud
 
+Capital Post Staff Writer
 
+In the late evening hours of January 10th, brave American Army forces launched an all-out offensive against the entrenched Chinese Communist invaders in the beleaguered seaport of Anchorage, Alaska, destroying all opposition and finally liberating the city after more than ten years of Chinese occupation.
+
+No red-blooded American can ever forget that terrible winter of 2066, when Chairman Cheng's commie cutthroats mercilessly invaded the icy extension of the United States, in an unprecedented act of foreign aggression that sent shockwaves all the way back to our nation's Capital.
+
+But the nightmare is finally over, and America, always the home of the brave, is once again the land of the free.""",
+    'Capitol Post - Food Riots Rile Feds': """By Walter "Street Beat" Munroe
+
+Capital Post Staff Writer
+
+It would appear that Washington's tolerance for American social disorder has finally reached its breaking point.
+
+In a recent public statement, White House spokesman Warren Eccleston said:
+
+"Okay, Americans are hungry. We get it. Well I've got news for you - things are tough all over, people. The President himself has been forced to substitute cube steak for his nightly prime rib, and the only wine available is a detestable Chateau Montrose 2043. But does he whine? Does he take to the streets like a rabid Red? So please, good people, please. Wait in line. Get your food. And then go home. We're Americans! We do not solve our problems with violence." """,
+    'Capitol Post - U.S. to Annex Canada!': """By Dorothy Proud
+
+Capital Post Staff Writer
+
+In a move that is being widely viewed as both necessary and overdue, the United States military today declared that they will begin the immediate annexation of the country of Canada.
+
+The decision comes after a long and contentious relationship with the Canadian government that began shortly after the Chinese invasion of Anchorage, Alaska in the winter of 2066. The Canadian leadership at that time expressed its opposition to American troops passing through their country or traversing their airspace, but ultimately capitulated.
+
+Tensions with our neighbor to the north have only escalated since then as the United States has found itself relying heavily on Canada's natural resources - including wood cultivated from the country's great Timberland forests - to maintain the war effort against China.
+
+But it was a recent near-sabotage of the Alaskan pipeline that finally tipped the American military's hand.
+
+"That was the last straw," said Buzz Babcock, commander of U.S. forces in Canada. "You know what's been stopping the Reds from pouring into downtown Juneau? American soldiers, that's what. And now we've got to worry about someone - Chinese, Alaskan, or otherwise - taking out the pipeline? I don't think so. Effectively immediately, United States troops are beginning a complete takeover of all Canadian assets and resources. Little America is ours. But let's face it - it always has been." """,
+    'Capitol Post - Development of Super Weapon Confirmed': """By Walter "Street Beat" Munroe
+
+Capital Post Staff Writer
+
+In a startling turnaround from their previous policy of complete covert development, the United States Army has confirmed that they are indeed working on a new super weapon, one designed specifically to crush the Red Chinese invasion force and liberate occupied Anchorage, Alaska once and for all.
+
+Speaking at an Army press conference at the Pentagon, General Constantine Chase stated: "No more secrets. The time has come to lay all our cards on the table, so the Chinese can see with their own eyes that we've got the winning hand. The United States Army is proud to announce that for the first time in history, General Atomics International and RobCo have joined forces to create for this great country a super weapon that will leave every single yellow-bellied Red shaking in their Commie booties."
+
+Unfortunately for our readers, that's as specific as Chase is willing to get. While he and the Army are ready for China to know the U.S. is developing a new weapon, they're not quite ready to divulge just what it is, or when it will be ready for deployment.
+
+"All in due time, all in due time. Rest assured, when this weapon is complete, liberty will come to Anchorage... and Hell will follow." """,
+    'Capitol Post - United Nations Disbanded!': """By Dorothy Proud
+
+Capital Post Staff Writer
+
+In a crushing blow to foreign relations and world peace, the United Nations yesterday was completely disbanded, leaving its member nations to fend for themselves in these trying times.
+
+Many had considered the United Nations the best hope for brokering a ceasefire between the European Commonwealth and the nations of the Middle East, but such an intervention is now impossible.
+
+In a somber press conference at the United Nations building in New York City, United Nations president Sakugama Okiri had this to say: "It is a sad day for the United States. Sadder still for the world. An era of relative peace and prosperity has come to a tragic end. The Resources Wars are upon us, and in my humble opinion the United Nations is needed now more than ever. Sadly, the world disagrees."
+
+Those nations that have not already moved out of the immense headquarters will have completely vacated the premises by the end of the week. Several organizations have already begun bidding on the prime real estate, but children's toy retailer Bumbalo's seems determined to transform the building into their new East Coast superstore.""",
+    'Capitol Post - Pint-Sized Slasher: More than Myth?': """By Walter "Street Beat" Munroe
+
+Capital Post Staff Writer
+
+What American child alive hasn't heard the story of the Pint-Sized Slasher, that diminutive demon in a clown mask who stalks and slashes the innocent residents of supposedly safe suburbia? It's just one of the many folk stories parents use to scare their youngsters into behaving themselves. Or is it?
+
+According to Germantown police chief Joseph Field, the Pint-Sized Slasher may be more real than many people would like to admit. "After reviewing the autopsy results of the Linden Street slayings, we have confirmed that the force and direction of every knife wound are consistent with an attack from a much smaller assailant. A child, to be precise."
+
+Add to the sinister forensic findings this statement from Christopher Atkinson, the one surviving victim of the adolescent assassin, and it becomes clear that the Pint-Sized Slasher does indeed walk among us: "The clown! The clown! He's going to kill us all, do you understand me? He stabbed my brother Shaun right in the face! He killed my brother! The little clown!"
+
+But assuming the Pint-Sized Slasher is indeed a real, tangible threat to the peace loving residents of D.C. suburbia, one question remains: why? What could possible motivate a child to don a clown mask and murder innocent people in cold blood? We may never know. At least not until the miniature maniac is brought to justice. Until then, all we can do is lock our doors, kiss our children goodnight… and pray they live to see morning.""",
 
 
 }
