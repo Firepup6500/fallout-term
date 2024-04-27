@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "fallout-term"
+version = "0.0.1"
+description = ""
+authors = ["Firepup Sixfifty <firepyp650@gmail.com>"]
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.11"
+playsound = "^1.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
