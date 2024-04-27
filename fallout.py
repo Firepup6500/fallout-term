@@ -4,7 +4,6 @@ import fallout_boot as boot
 import fallout_locked as locked
 import fallout_hack as hack
 import fallout_selection as select
-#import fallout_things as things
 import fallout_data as data
 from fallout_functions import soundTest, isQueueEmpty, addSound
 from time import sleep
