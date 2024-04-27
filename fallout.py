@@ -38,7 +38,7 @@ try:
                 sleep(0.2)
             sel = 0
             while sel != 3:
-                sel = select.beginSelection(data.ROBCO_HEADERS, data.SOFT_HEADERS, data.MAIN_MENU)
+                sel = select.beginSelection(data.ROBCO_HEADERS, data.SOFT_HEADERS, data.MAIN_MENU, data.MAIN_MSGS)
                 while not queueIsEmpty():
                     sleep(0.2)
                 if   sel == 0:

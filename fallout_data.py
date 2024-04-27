@@ -37,7 +37,7 @@ MAIN_MENU = (
     'Lock Control',
     'Turret Control',
     'Read Log',
-    'Logoff Terminal'
+    'Log out'
 )
 
 LOCK_MENU = {
@@ -51,6 +51,13 @@ TURRET_MENU = {
     'ENABLED': ["Deactivate Turret System", "Activate Turret System"],
     'RETURN': ["Return"]
 }
+
+MAIN_MSGS = (
+    '',
+    '',
+    '',
+    'Shutting Down.'
+)
 
 TURRET_MSGS = {
     'TARGETING': ['Target Data Cleared. Exercise Caution.', '<!>Please Exercise Caution<!>'],
