@@ -33,7 +33,7 @@ def runLocked(scr):
     scr.refresh()
     curses.napms(LOCKED_OUT_TIME)
 
-    
+
 def beginLocked():
     """
     Initialize curses and start the locked out process
