@@ -4,25 +4,27 @@ from fallout_functions import INPUT_PAUSE
 from fallout_functions import TYPE_DELAY
 from fallout_functions import upperInput
 from fallout_functions import HIDDEN_MASK
+
 ################## text strings ######################
 
-HEADER_TEXT = 'WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK'
+HEADER_TEXT = "WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK"
 
-PASSWORD_PROMPT = 'ENTER PASSWORD NOW'
+PASSWORD_PROMPT = "ENTER PASSWORD NOW"
 
-PASSWORD_ERROR = 'INCORRECT PASSWORD, PLEASE TRY AGAIN'
+PASSWORD_ERROR = "INCORRECT PASSWORD, PLEASE TRY AGAIN"
 
 ################## global "constants" ################
 
-ENTRY = 'LOGON '
+ENTRY = "LOGON "
 
 ################## functions #########################
+
 
 def runLogin(scr, hardMode, username, password):
     """
     Start the login process
 
-    hardMode - boolean indicating whether the user has to enter the username 
+    hardMode - boolean indicating whether the user has to enter the username
                and password or if they are entered automatically
     username - the username to log in
     password - the password to log in
@@ -35,37 +37,37 @@ def runLogin(scr, hardMode, username, password):
     curses.noecho()
     scr.scrollok(True)
 
-    slowWrite(scr, HEADER_TEXT + '\n\n')
+    slowWrite(scr, HEADER_TEXT + "\n\n")
 
     if hardMode:
         # use must enter the correct text to proceed
-        entry = ''
+        entry = ""
         while entry.upper() != ENTRY.upper() + username.upper():
-            slowWrite(scr, '> ')
+            slowWrite(scr, "> ")
             entry = upperInput(scr)
     else:
         # input is entered for them
-        slowWrite(scr, '> ')
+        slowWrite(scr, "> ")
         curses.napms(INPUT_PAUSE)
-        slowWrite(scr, ENTRY + username.upper() + '\n', TYPE_DELAY, True)
+        slowWrite(scr, ENTRY + username.upper() + "\n", TYPE_DELAY, True)
 
-    slowWrite(scr, '\n' + PASSWORD_PROMPT + '\n\n')
+    slowWrite(scr, "\n" + PASSWORD_PROMPT + "\n\n")
 
     if hardMode:
         # use must enter the correct text to proceed
-        entry = ''
+        entry = ""
         while entry.upper() != password.upper():
             if entry:
-                slowWrite(scr, PASSWORD_ERROR + '\n\n')
-            
-            slowWrite(scr, '> ')
+                slowWrite(scr, PASSWORD_ERROR + "\n\n")
+
+            slowWrite(scr, "> ")
             entry = upperInput(scr, True)
     else:
         # input is entered for them
-        slowWrite(scr, '> ')
+        slowWrite(scr, "> ")
         curses.napms(INPUT_PAUSE)
         password_stars = HIDDEN_MASK * len(password)
-        slowWrite(scr, password_stars + '\n', TYPE_DELAY, True)
+        slowWrite(scr, password_stars + "\n", TYPE_DELAY, True)
 
     curses.napms(500)
 

@@ -9,11 +9,11 @@ from time import sleep
 
 LETTER_PAUSE = 5
 
-INPUT_PAUSE = 500 # ms
+INPUT_PAUSE = 500  # ms
 
 TYPE_DELAY = 40
 
-HIDDEN_MASK = '*'
+HIDDEN_MASK = "*"
 
 NEWLINE = 10
 
@@ -30,7 +30,8 @@ _soundQueue = []
 global _queueRunning
 _queueRunning = False
 
-def slowWrite(window, text, pause = LETTER_PAUSE, fake_user = False, silent = False):
+
+def slowWrite(window, text, pause=LETTER_PAUSE, fake_user=False, silent=False):
     """
     wrapper for curses.addstr() which writes the text slowly
     """
@@ -38,13 +39,15 @@ def slowWrite(window, text, pause = LETTER_PAUSE, fake_user = False, silent = Fa
     texts = {0: text}
     if len(text) > width:
         while any(len(texts[ind]) > width for ind in texts.keys()):
-            i = 0;
+            i = 0
             for ind in texts.keys():
-              if len(texts[ind]) > width:
-                  break
-              i += 1
-            texts[i+1] = f"{texts[i].split()[-1].strip()}{' '+texts[i+1].strip() if texts.get(i+1) else ''}\n"
-            texts[i] = ' '.join(texts[i].split()[:-1]).strip() + '\n'
+                if len(texts[ind]) > width:
+                    break
+                i += 1
+            texts[i + 1] = (
+                f"{texts[i].split()[-1].strip()}{' '+texts[i+1].strip() if texts.get(i+1) else ''}\n"
+            )
+            texts[i] = " ".join(texts[i].split()[:-1]).strip() + "\n"
     for txt in texts.values():
         if not fake_user and not silent:
             addSound("beep")
@@ -55,7 +58,8 @@ def slowWrite(window, text, pause = LETTER_PAUSE, fake_user = False, silent = Fa
     if fake_user and not silent:
         _playSound("keyenter", True)
 
-def upperInput(window, hidden = False, can_newline = True):
+
+def upperInput(window, hidden=False, can_newline=True):
     """
     Reads user input until enter key is pressed. Echoes the input in upper case
 
@@ -64,7 +68,7 @@ def upperInput(window, hidden = False, can_newline = True):
                   scrolled if necessary
     """
     inchar = 0
-    instr = ''
+    instr = ""
     while inchar != NEWLINE:
         inchar = window.getch()
         # convert lower case to upper
@@ -73,7 +77,7 @@ def upperInput(window, hidden = False, can_newline = True):
         # deal with backspace
         if inchar in [DELETE, BACKSPACE]:
             if len(instr) > 0:
-                #addSound("keyenter")
+                # addSound("keyenter")
                 instr = instr[:-1]
                 cur = window.getyx()
                 window.move(cur[0], cur[1] - 1)
@@ -84,39 +88,40 @@ def upperInput(window, hidden = False, can_newline = True):
             continue
         # output the character
         elif inchar != NEWLINE:
-            #addSound("keyenter")
+            # addSound("keyenter")
             instr += chr(inchar)
             if hidden:
                 window.addch(HIDDEN_MASK)
             else:
                 window.addch(inchar)
         elif can_newline:
-             #addSound("keyenter")
+            # addSound("keyenter")
             window.addch(NEWLINE)
     return instr
 
-def centeredWrite(window, text, pause = LETTER_PAUSE, silent = False):
+
+def centeredWrite(window, text, pause=LETTER_PAUSE, silent=False):
     """
     Writes to the current line but centers the text
     """
     width = window.getmaxyx()[1]
     window.move(window.getyx()[0], int(width / 2 - len(text) / 2))
-    slowWrite(window, text, pause, silent = silent)
+    slowWrite(window, text, pause, silent=silent)
 
 
 def _soundCheck():
     """
     Internal use - Checks if the user explicity disabled sound or not
     """
-    return '--no-sound' not in sys.argv
+    return "--no-sound" not in sys.argv
 
 
-def _playSound(file, block = False):
+def _playSound(file, block=False):
     """
     Internal use - plays a specific sound from the current directory
     """
     if _soundCheck():
-        _play(str(_Path.cwd() / f'audio/{file}.wav'), block)
+        _play(str(_Path.cwd() / f"audio/{file}.wav"), block)
 
 
 def _playQueue():

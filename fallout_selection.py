@@ -4,6 +4,7 @@ from fallout_functions import slowWrite, centeredWrite, NEWLINE, SPACE, addSound
 
 ###################### Functions ############################
 
+
 def makeSelection(scr, SELECTIONS, MSGS):
     """
     ALlow the user to select an option
@@ -20,9 +21,9 @@ def makeSelection(scr, SELECTIONS, MSGS):
         scr.move(selection_start_y, 0)
         line = 0
         for sel in SELECTIONS:
-            whole_line = '> ' + SELECTIONS[line]
+            whole_line = "> " + SELECTIONS[line]
             space = width - len(whole_line) % width
-            whole_line += ' ' * space
+            whole_line += " " * space
 
             if line == selection:
                 scr.addstr(whole_line, curses.A_REVERSE)
@@ -42,10 +43,10 @@ def makeSelection(scr, SELECTIONS, MSGS):
             addSound("keyenter")
     addSound("keyenter")
     if MSGS and MSGS[selection]:
-        whole_line = '> ' + MSGS[selection]
+        whole_line = "> " + MSGS[selection]
         space = width - len(whole_line) % width
-        whole_line += ' ' * space
-        scr.addstr(' ' * width)
+        whole_line += " " * space
+        scr.addstr(" " * width)
         scr.addstr(whole_line)
         scr.refresh()
         sleep(2)
@@ -65,10 +66,10 @@ def runSelection(scr, CENTERED_HEADERS, OTHER_HEADERS, OPTIONS, MESSAGES):
     width = scr.getmaxyx()[1]
 
     for header in CENTERED_HEADERS:
-        centeredWrite(scr, header + '\n')
+        centeredWrite(scr, header + "\n")
 
     for header in OTHER_HEADERS:
-        slowWrite(scr, header + '\n')
+        slowWrite(scr, header + "\n")
 
     for i in range(width):
         scr.addch(curses.ACS_BSBS)
@@ -76,7 +77,8 @@ def runSelection(scr, CENTERED_HEADERS, OTHER_HEADERS, OPTIONS, MESSAGES):
 
     return makeSelection(scr, OPTIONS, MESSAGES)
 
-def beginSelection(center, other, options, messages = []):
+
+def beginSelection(center, other, options, messages=[]):
     """
     Initialize curses and start the boot process
     """

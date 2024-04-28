@@ -5,8 +5,8 @@ from fallout_functions import centeredWrite
 
 ################## text strings ######################
 
-LOCKED_1 = 'TERMINAL LOCKED'
-LOCKED_2 = 'PLEASE CONTACT AN ADMINISTRATOR'
+LOCKED_1 = "TERMINAL LOCKED"
+LOCKED_2 = "PLEASE CONTACT AN ADMINISTRATOR"
 
 ################## global 'constants' ################
 
@@ -14,6 +14,7 @@ LOCKED_2 = 'PLEASE CONTACT AN ADMINISTRATOR'
 LOCKED_OUT_TIME = 5000
 
 ################## functions #########################
+
 
 def runLocked(scr):
     """
@@ -27,9 +28,9 @@ def runLocked(scr):
     scr.erase()
     curses.curs_set(0)
     scr.move(int(height / 2 - 1), 0)
-    centeredWrite(scr, LOCKED_1, silent = True)
+    centeredWrite(scr, LOCKED_1, silent=True)
     scr.move(int(height / 2 + 1), 0)
-    centeredWrite(scr, LOCKED_2, silent = True)
+    centeredWrite(scr, LOCKED_2, silent=True)
     scr.refresh()
     curses.napms(LOCKED_OUT_TIME)
 

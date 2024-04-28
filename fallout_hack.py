@@ -6,7 +6,7 @@ from fallout_functions import slowWrite, upperInput, addSound
 
 ################## text strings ######################
 
-HEADER_TEXT = 'ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL'
+HEADER_TEXT = "ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL"
 
 ################## global "constants" ################
 
@@ -25,12 +25,13 @@ HEADER_LINES = 5
 LOGIN_PAUSE = 3
 
 # starting number for hex generation
-START_HEX = 0xf650
+START_HEX = 0xF650
 
 # list of possible symbols for password hiding
-SYMBOLS = '!@#$%^*()_-+={}[]|\\:;\'",<>./?'
+SYMBOLS = "!@#$%^*()_-+={}[]|\\:;'\",<>./?"
 
 ################## functions #########################
+
 
 def generateHex(n):
     """
@@ -62,8 +63,9 @@ def getPasswords():
     groups = []
 
     # script file / password file location
-    __location__ = os.path.realpath(os.path.join(os.getcwd(),
-                                                 os.path.dirname(__file__)))
+    __location__ = os.path.realpath(
+        os.path.join(os.getcwd(), os.path.dirname(__file__))
+    )
 
     # read from passwords.txt
     with open(os.path.join(__location__, "passwords.txt")) as pwfile:
@@ -96,7 +98,7 @@ def getFiller(length, passwords):
         # skip a distance based on total size to cover then place a password
         maxSkip = int(length / pwdCount - pwdLen)
         i += random.randint(maxSkip - 2, maxSkip)
-        filler = filler[:i] + pwd + filler[i + pwdLen:]
+        filler = filler[:i] + pwd + filler[i + pwdLen :]
         i += pwdLen
     return filler
 
@@ -121,34 +123,46 @@ def initScreen(scr):
     fillerLength = width / 2 * fillerHeight
     passwords = getPasswords()
     filler = getFiller(fillerLength, passwords)
-    fillerCol1, fillerCol2 = filler[0:len(filler)//2], filler[len(filler)//2:]
+    fillerCol1, fillerCol2 = filler[0 : len(filler) // 2], filler[len(filler) // 2 :]
 
-    #print(fillerCol1)
-    #time.sleep(15)
-    #print(fillerCol2)
-    #time.sleep(15)
+    # print(fillerCol1)
+    # time.sleep(15)
+    # print(fillerCol2)
+    # time.sleep(15)
 
     # each column of symbols and passwords should be 1/4 of the screen
     fillerWidth = int(width / 4)
 
     # print the header stuff
     slowWrite(scr, HEADER_TEXT)
-    slowWrite(scr, '\nENTER PASSWORD NOW\n\n')
-    slowWrite(scr, str(LOGIN_ATTEMPTS) + ' ATTEMPT(S) LEFT: ')
+    slowWrite(scr, "\nENTER PASSWORD NOW\n\n")
+    slowWrite(scr, str(LOGIN_ATTEMPTS) + " ATTEMPT(S) LEFT: ")
     for i in range(LOGIN_ATTEMPTS):
         scr.addch(curses.ACS_BLOCK)
-        slowWrite(scr, ' ')
-    slowWrite(scr, '\n\n')
+        slowWrite(scr, " ")
+    slowWrite(scr, "\n\n")
 
     # print the hex and filler
     for i in range(fillerHeight):
-        slowWrite(scr, "0x%X %s" % (hexCol1[i], fillerCol1[i * fillerWidth: (i + 1) * fillerWidth]), 1, silent = True)
+        slowWrite(
+            scr,
+            "0x%X %s"
+            % (hexCol1[i], fillerCol1[i * fillerWidth : (i + 1) * fillerWidth]),
+            1,
+            silent=True,
+        )
         if i < fillerHeight - 1:
-            scr.addstr('\n')
+            scr.addstr("\n")
 
     for i in range(fillerHeight):
         scr.move(HEADER_LINES + i, int(CONST_CHARS / 2 + fillerWidth))
-        slowWrite(scr, '0x%X %s' % (hexCol2[i], fillerCol2[i * fillerWidth: (i + 1) * fillerWidth]), 1, silent = True)
+        slowWrite(
+            scr,
+            "0x%X %s"
+            % (hexCol2[i], fillerCol2[i * fillerWidth : (i + 1) * fillerWidth]),
+            1,
+            silent=True,
+        )
 
     scr.refresh()
 
@@ -163,16 +177,19 @@ def moveInput(scr, inputPad):
     height = size[0]
     width = size[1]
 
-    inputPad.addstr('\n>')
+    inputPad.addstr("\n>")
 
     # cursor position relative to inputPad
     cursorPos = inputPad.getyx()
 
-    inputPad.refresh(0, 0,
-                     int(height - cursorPos[0] - 1),
-                     int(width / 2 + CONST_CHARS),
-                     int(height - 1),
-                     int(width - 1))
+    inputPad.refresh(
+        0,
+        0,
+        int(height - cursorPos[0] - 1),
+        int(width / 2 + CONST_CHARS),
+        int(height - 1),
+        int(width - 1),
+    )
 
 
 def userInput(scr, passwords):
@@ -207,16 +224,16 @@ def userInput(scr, passwords):
 
         # write under the last line of text
         inputPad.move(cursorPos[0] - 1, cursorPos[1] - 1)
-        inputPad.addstr('>' + guess.upper() + '\n')
+        inputPad.addstr(">" + guess.upper() + "\n")
 
         # user got password right
         if guess.upper() == pwd.upper():
 
             addSound("correctpass")
-            inputPad.addstr('>Exact match!\n')
-            inputPad.addstr('>Please wait\n')
-            inputPad.addstr('>while system\n')
-            inputPad.addstr('>is accessed.\n')
+            inputPad.addstr(">Exact match!\n")
+            inputPad.addstr(">Please wait\n")
+            inputPad.addstr(">while system\n")
+            inputPad.addstr(">is accessed.\n")
 
             moveInput(scr, inputPad)
 
@@ -232,12 +249,11 @@ def userInput(scr, passwords):
                     if pwd[i].upper() == guess[i].upper():
                         matched += 1
             except IndexError:
-                pass # user did not enter enough letters
+                pass  # user did not enter enough letters
 
             addSound("wrongpass")
-            inputPad.addstr('>Entry denied\n')
-            inputPad.addstr('>' + str(matched) + '/' + str(pwdLen) +
-                            ' correct.\n')
+            inputPad.addstr(">Entry denied\n")
+            inputPad.addstr(">" + str(matched) + "/" + str(pwdLen) + " correct.\n")
 
         attempts -= 1
         # show remaining attempts
@@ -248,11 +264,12 @@ def userInput(scr, passwords):
             if i < attempts:
                 scr.addch(curses.ACS_BLOCK)
             else:
-                scr.addstr(' ')
-            scr.addstr(' ')
+                scr.addstr(" ")
+            scr.addstr(" ")
 
     # Out of attempts
     return None
+
 
 def runLogin(scr):
     """
