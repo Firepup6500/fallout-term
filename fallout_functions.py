@@ -34,10 +34,22 @@ def slowWrite(window, text, pause = LETTER_PAUSE, fake_user = False, silent = Fa
     """
     if not fake_user and not silent:
         addSound("beep")
-    for i in range(len(text)):
-        window.addstr(text[i])
-        window.refresh()
-        curses.napms(pause)
+    width = window.getmaxyx()[1]
+    texts = {0: text}
+    if len(text) > width:
+        while any(len(texts[ind]) > width for ind in texts.keys()):
+            i = 0;
+            for ind in texts.keys():
+              if len(texts[ind]) > width:
+                  break
+              i += 1
+            texts[i+1] = f"{texts[i].split()[-1].strip()}{' '+texts[i+1].strip() if texts.get(i+1) else ''}\n"
+            texts[i] = ' '.join(texts[i].split()[:-1]).strip() + '\n'
+    for txt in texts.values():
+        for i in range(len(txt)):
+            window.addstr(txt[i])
+            window.refresh()
+            curses.napms(pause)
     if fake_user and not silent:
         _playSound("keyenter", True)
 
