@@ -162,7 +162,7 @@ def moveInput(scr, inputPad):
     size = scr.getmaxyx()
     height = size[0]
     width = size[1]
-    
+
     inputPad.addstr('\n>')
 
     # cursor position relative to inputPad
@@ -173,7 +173,7 @@ def moveInput(scr, inputPad):
                      int(width / 2 + CONST_CHARS),
                      int(height - 1),
                      int(width - 1))
-    
+
 
 def userInput(scr, passwords):
     """
@@ -185,7 +185,7 @@ def userInput(scr, passwords):
     size = scr.getmaxyx()
     height = size[0]
     width = size[1]
-    
+
     # set up a pad for user input
     inputPad = curses.newpad(height, int(width / 2 + CONST_CHARS))
 
@@ -194,14 +194,14 @@ def userInput(scr, passwords):
     # randomly pick a password from the list
     pwd = passwords[random.randint(0, len(passwords) - 1)]
     curses.noecho()
-    
+
     while attempts > 0:
         # move the curser to the correct spot for typing
         scr.move(int(height - 1), int(width / 2 + CONST_CHARS + 1))
 
         # scroll user input up as the user tries passwords
         moveInput(scr, inputPad)
-        
+
         guess = upperInput(scr, False, False)
         cursorPos = inputPad.getyx()
 
@@ -211,7 +211,7 @@ def userInput(scr, passwords):
 
         # user got password right
         if guess.upper() == pwd.upper():
-            
+
             addSound("correctpass")
             inputPad.addstr('>Exact match!\n')
             inputPad.addstr('>Please wait\n')
@@ -222,7 +222,7 @@ def userInput(scr, passwords):
 
             time.sleep(LOGIN_PAUSE)
             return pwd
-            
+
         # wrong password
         else:
             pwdLen = len(pwd)
@@ -233,12 +233,12 @@ def userInput(scr, passwords):
                         matched += 1
             except IndexError:
                 pass # user did not enter enough letters
-                
+
             addSound("wrongpass")
             inputPad.addstr('>Entry denied\n')
             inputPad.addstr('>' + str(matched) + '/' + str(pwdLen) +
                             ' correct.\n')
-        
+
         attempts -= 1
         # show remaining attempts
         scr.move(SQUARE_Y, 0)
@@ -253,7 +253,7 @@ def userInput(scr, passwords):
 
     # Out of attempts
     return None
-        
+
 def runLogin(scr):
     """
     Start the login portion of the terminal
