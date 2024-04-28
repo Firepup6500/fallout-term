@@ -1,6 +1,6 @@
 import curses
 from time import sleep
-from fallout_functions import slowWrite, centeredWrite, NEWLINE, addSound
+from fallout_functions import slowWrite, centeredWrite, NEWLINE, SPACE, addSound
 
 ###################### Functions ############################
 
@@ -15,7 +15,7 @@ def makeSelection(scr, SELECTIONS, MSGS):
     selection_start_y = scr.getyx()[0]
     width = scr.getmaxyx()[1]
 
-    while inchar != NEWLINE:
+    while inchar not in [NEWLINE, SPACE]:
         # move to start of selections and hightlight current selection
         scr.move(selection_start_y, 0)
         line = 0
