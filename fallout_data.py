@@ -82,7 +82,7 @@ LOCK_CONDS = {
 }
 
 LOGS = {
-    'Megaton             - Afterword': """USER: MOIRA BROWN
+    'Megaton           - Afterword': """USER: MOIRA BROWN
 PASS: ***********
 
 Date: 09.10.2297
@@ -104,20 +104,20 @@ Just about everyone in the Capital Wasteland has a story about the Lone Wanderer
 Of course, that's why I'm working on the new book, compiling the best and most useful tales of the Lone Wanderer for the next generation. It's not easy sorting out all the conflicting stories, but that'll be half of the fun for the readers. More importantly, between all of those crazy stories of bravery, barbarity, and everything in-between, we can all find a reason to keep on fighting our war for survival.
 
 I guess some things never change, huh?""",
-    'ERR                 - Ikkm00:Mvkz6x1ml:Nqtm': "[ERROR HX40-399: invalid decry.key]",
-    'Nuka Cola           - Quantum Progress Report 0041': """Isotope CE770 has proven to be a disastrous failure. All of the test subjects suffered severe internal organ failures and died within three days of ingestion. We recommend the immediate destruction of container A32 in the production rooms and suggest switching to isotope CE772. Please send standard "Nuka Condolences" Fruit and Cheese Packages to test group member's families.""",
-    'Nuka Cola           - Quantum Progress Report 0055': "Isotope CE772 has proven too damaging to the initial test group which now needs to be disbanded due to their reluctance to continue in our program. This group has suffered 4 fatalities, 12 major internal organ failures and 32 internal radiation burns. This is an unacceptable number of issues in a given test group and recommend we switch to an alternate isotope (such as CE774 or UR993).",
-    'Nuka Cola           - Quantum Progress Report 0067': "Test subjects in the Nuka-Cola Quantum program are responding well to the reconfigured taste and the new isotope. The only listed side effects from the group are: 3 cases of dizziness, 1 case of nausea and 1 case of impaired vision. We find from a sampling of 50 that this is an acceptable number of cases and approve this product for production.",
-    'Nuka Cola           - Company Announcement': "The Nuka-Cola Corporation is pleased to announce to all it's employees that the first shipments of our Nuka-Cola Quantum® are on their way to retailers in the Washington D.C. area! This flagship test market program is the culmination of a three year research program to bring the refreshing taste of Quantum to market. Congratulations to all employees on a job well done!",
-    'Nuka Cola           - New Flavor Coming!': """Attention all Nuka-Cola Corporation Employees
+    'ERR               - Ikkm00:Mvkz6x1ml:Nqtm': "[ERROR HX40-399: invalid decry.key]",
+    'Nuka Cola         - Quantum Progress Report 0041': """Isotope CE770 has proven to be a disastrous failure. All of the test subjects suffered severe internal organ failures and died within three days of ingestion. We recommend the immediate destruction of container A32 in the production rooms and suggest switching to isotope CE772. Please send standard "Nuka Condolences" Fruit and Cheese Packages to test group member's families.""",
+    'Nuka Cola         - Quantum Progress Report 0055': "Isotope CE772 has proven too damaging to the initial test group which now needs to be disbanded due to their reluctance to continue in our program. This group has suffered 4 fatalities, 12 major internal organ failures and 32 internal radiation burns. This is an unacceptable number of issues in a given test group and recommend we switch to an alternate isotope (such as CE774 or UR993).",
+    'Nuka Cola         - Quantum Progress Report 0067': "Test subjects in the Nuka-Cola Quantum program are responding well to the reconfigured taste and the new isotope. The only listed side effects from the group are: 3 cases of dizziness, 1 case of nausea and 1 case of impaired vision. We find from a sampling of 50 that this is an acceptable number of cases and approve this product for production.",
+    'Nuka Cola         - Company Announcement': "The Nuka-Cola Corporation is pleased to announce to all it's employees that the first shipments of our Nuka-Cola Quantum® are on their way to retailers in the Washington D.C. area! This flagship test market program is the culmination of a three year research program to bring the refreshing taste of Quantum to market. Congratulations to all employees on a job well done!",
+    'Nuka Cola         - New Flavor Coming!': """Attention all Nuka-Cola Corporation Employees
 
 We are very proud to announce that R&D has been completed on Nuka-Cola Clear! With an only minimal loss of life, we've been able to modify the look of Nuka-Cola but give it the same great taste. We will be submitting the product to Marketing shortly for bottle design and advertising strategies. From all of us in the Research Department, thanks for the support!""",
-    'Nuka Cola           - From: Marketing': """The following locations have been accepted into the flagship Nuka-Cola Quantum test program. Please ensure that 1 (one) crate of Quantum is included with their regular deliveries along with the advertising package provided by our Marketing Department.
+    'Nuka Cola         - From: Marketing': """The following locations have been accepted into the flagship Nuka-Cola Quantum test program. Please ensure that 1 (one) crate of Quantum is included with their regular deliveries along with the advertising package provided by our Marketing Department.
 
 1. Paradise Falls Shopping Mart
 2. Super Duper Mart
 3. Old Olney Grocery""",
-    'Nuka Cola           - Packing Line Instructions': """Welcome to the Nuka-Cola Packing Line Operator's Station! You are now instrumental in getting Nuka-Cola from our factory and to the public, so please read the simple instructions below. If you need assistance, please call x347 and ask for your Line Supervisor.
+    'Nuka Cola         - Packing Line Instructions': """Welcome to the Nuka-Cola Packing Line Operator's Station! You are now instrumental in getting Nuka-Cola from our factory and to the public, so please read the simple instructions below. If you need assistance, please call x347 and ask for your Line Supervisor.
 
 1. Access the Packing Terminal and choose desired inventory to load into Sorting Units.
 2. Select "Activate Packing Line."
@@ -125,25 +125,25 @@ We are very proud to announce that R&D has been completed on Nuka-Cola Clear! Wi
 4. If there is an emergency, DO NOT PANIC! Simply call x347 and ask for your Line Supervisor. The Packing Line will automatically shut down in the event of an issue.
 
 Remember, only you can prevent inventory loss by being attentive and vigilant!""",
-    'Nuka Cola           - Packing Line Notice': """Attention all Packing Line employees!
+    'Nuka Cola         - Packing Line Notice': """Attention all Packing Line employees!
 
 Due to an oversight by the design department, the new Nuka-Cola Quantum bottles are slightly heavier than the standard Nuka-Cola bottles. As a result, the Packing Line is prone to jams and may cause damage to the equipment. Please DO NOT load Nuka-Cola Quantum bottles into the Sorting Units until further notice. All test samples of Quantum will be packaged by hand until a solution is reached.""",
-    'Nuka Cola           - Stage One': """Stage One of the Nuka-Cola Quantum marketing will include: 2 (two) 15 (fifteen)-second television commercials, 4 (four) 10 (ten)-second radio commercials and a highway billboard campaign.
+    'Nuka Cola         - Stage One': """Stage One of the Nuka-Cola Quantum marketing will include: 2 (two) 15 (fifteen)-second television commercials, 4 (four) 10 (ten)-second radio commercials and a highway billboard campaign.
 
 The spots on TV and radio will tease the consumer with the blue glow of the new drink, never showing the bottle in an illuminated environment. The billboard will show the bottle's blue silhouette on a black background.
 
 The tag line will be "Try something new... Go Blue!". The name will not be revealed until Stage Two.""",
-    'Nuka Cola           - Stage Two': """Stage Two of the Nuka-Cola Quantum marketing will include: 2 (two) 30 (thirty)-second television commercials, 4 (four) 15 (fifteen)-second radio commercials and a highway billboard campaign.
+    'Nuka Cola         - Stage Two': """Stage Two of the Nuka-Cola Quantum marketing will include: 2 (two) 30 (thirty)-second television commercials, 4 (four) 15 (fifteen)-second radio commercials and a highway billboard campaign.
 
 In this stage, the name "Quantum" will be revealed and the bottle shown in full view. We will emphasize the drink's new energy content and flavor.
 
 The tag line will be "Take the leap... enjoy a Quantum!" """,
-    'Nuka Cola           - Stage Three': """Stage Three of the Nuka-Cola Quantum marketing will include: 4 (four) 30 (thirty)-second television commercials, 4 (four) 15 (fifteen)-second radio commercials and a highway billboard campaign.
+    'Nuka Cola         - Stage Three': """Stage Three of the Nuka-Cola Quantum marketing will include: 4 (four) 30 (thirty)-second television commercials, 4 (four) 15 (fifteen)-second radio commercials and a highway billboard campaign.
 
 In this final stage we will aggressively compare the drink to other competitors and show their inferiority using hired actors at "taste tests". The actors will read pre-written scripts approved by our department. The text should give an authentic "on the spot" impression but still clearly point out Quantum's strengths.
 
 The tag line will remain: "Take the leap... enjoy a Quantum!" """,
-    'Capitol Post        - Commies Crushed - Alaska Liberated!': """By Dorothy Proud
+    'Capitol Post      - Commies Crushed - Alaska Liberated!': """By Dorothy Proud
 
 Capital Post Staff Writer
 
@@ -152,7 +152,7 @@ In the late evening hours of January 10th, brave American Army forces launched a
 No red-blooded American can ever forget that terrible winter of 2066, when Chairman Cheng's commie cutthroats mercilessly invaded the icy extension of the United States, in an unprecedented act of foreign aggression that sent shockwaves all the way back to our nation's Capital.
 
 But the nightmare is finally over, and America, always the home of the brave, is once again the land of the free.""",
-    'Capitol Post        - Food Riots Rile Feds': """By Walter "Street Beat" Munroe
+    'Capitol Post      - Food Riots Rile Feds': """By Walter "Street Beat" Munroe
 
 Capital Post Staff Writer
 
@@ -161,7 +161,7 @@ It would appear that Washington's tolerance for American social disorder has fin
 In a recent public statement, White House spokesman Warren Eccleston said:
 
 "Okay, Americans are hungry. We get it. Well I've got news for you - things are tough all over, people. The President himself has been forced to substitute cube steak for his nightly prime rib, and the only wine available is a detestable Chateau Montrose 2043. But does he whine? Does he take to the streets like a rabid Red? So please, good people, please. Wait in line. Get your food. And then go home. We're Americans! We do not solve our problems with violence." """,
-    'Capitol Post        - U.S. to Annex Canada!': """By Dorothy Proud
+    'Capitol Post      - U.S. to Annex Canada!': """By Dorothy Proud
 
 Capital Post Staff Writer
 
@@ -174,7 +174,7 @@ Tensions with our neighbor to the north have only escalated since then as the Un
 But it was a recent near-sabotage of the Alaskan pipeline that finally tipped the American military's hand.
 
 "That was the last straw," said Buzz Babcock, commander of U.S. forces in Canada. "You know what's been stopping the Reds from pouring into downtown Juneau? American soldiers, that's what. And now we've got to worry about someone - Chinese, Alaskan, or otherwise - taking out the pipeline? I don't think so. Effectively immediately, United States troops are beginning a complete takeover of all Canadian assets and resources. Little America is ours. But let's face it - it always has been." """,
-    'Capitol Post        - Development of Super Weapon Confirmed': """By Walter "Street Beat" Munroe
+    'Capitol Post      - Development of Super Weapon Confirmed': """By Walter "Street Beat" Munroe
 
 Capital Post Staff Writer
 
@@ -185,7 +185,7 @@ Speaking at an Army press conference at the Pentagon, General Constantine Chase 
 Unfortunately for our readers, that's as specific as Chase is willing to get. While he and the Army are ready for China to know the U.S. is developing a new weapon, they're not quite ready to divulge just what it is, or when it will be ready for deployment.
 
 "All in due time, all in due time. Rest assured, when this weapon is complete, liberty will come to Anchorage... and Hell will follow." """,
-    'Capitol Post        - United Nations Disbanded!': """By Dorothy Proud
+    'Capitol Post      - United Nations Disbanded!': """By Dorothy Proud
 
 Capital Post Staff Writer
 
@@ -196,7 +196,7 @@ Many had considered the United Nations the best hope for brokering a ceasefire b
 In a somber press conference at the United Nations building in New York City, United Nations president Sakugama Okiri had this to say: "It is a sad day for the United States. Sadder still for the world. An era of relative peace and prosperity has come to a tragic end. The Resources Wars are upon us, and in my humble opinion the United Nations is needed now more than ever. Sadly, the world disagrees."
 
 Those nations that have not already moved out of the immense headquarters will have completely vacated the premises by the end of the week. Several organizations have already begun bidding on the prime real estate, but children's toy retailer Bumbalo's seems determined to transform the building into their new East Coast superstore.""",
-    'Capitol Post        - Pint-Sized Slasher: More than Myth?': """By Walter "Street Beat" Munroe
+    'Capitol Post      - Pint-Sized Slasher: More than Myth?': """By Walter "Street Beat" Munroe
 
 Capital Post Staff Writer
 
@@ -313,7 +313,7 @@ Doctor Stanislaus Braun
 Director, Societal Preservation Program
 Vault-Tec Corporation""",
     'Vault 101          - Attachment A': "Vault 101 will not receive a G.E.C.K. module, and should operate under the guidelines laid forth in the Overseer's sealed orders.",
-    'Vault 101          - Vault-Tec Scientific Entry: The G.E.C.K.": """The G.E.C.K. is, quite simply, the most advanced piece of technology ever developed by Vault-Tec -- a terraforming module capabilityIn-game spelling, punctuation and/or grammar of creating life from complete lifelessness.
+    'Vault 101          - Vault-Tec Scientific Entry: The G.E.C.K.': """The G.E.C.K. is, quite simply, the most advanced piece of technology ever developed by Vault-Tec -- a terraforming module capability of creating life from complete lifelessness.
 
 After riding out the storm of nuclear Armageddon in a Vault-Tec patented vault, residents can then activate the G.E.C.K., and create a new Earthen paradise -- craters and dust will give way to rolling grasslands and sparkling clear water. Of course, due to time and monetary constraints, not every vault will be equipped with a G.E.C.K. module.""",
     'Vault 101          - External Contact Report': """The Vault recently received unexpected radio contact over the governmental Vault-Tec frequency, from an organization calling itself "The Enclave."
