@@ -34,8 +34,6 @@ def slowWrite(window, text, pause = LETTER_PAUSE, fake_user = False, silent = Fa
     """
     wrapper for curses.addstr() which writes the text slowly
     """
-    if not fake_user and not silent:
-        addSound("beep")
     width = window.getmaxyx()[1]
     texts = {0: text}
     if len(text) > width:
@@ -48,6 +46,8 @@ def slowWrite(window, text, pause = LETTER_PAUSE, fake_user = False, silent = Fa
             texts[i+1] = f"{texts[i].split()[-1].strip()}{' '+texts[i+1].strip() if texts.get(i+1) else ''}\n"
             texts[i] = ' '.join(texts[i].split()[:-1]).strip() + '\n'
     for txt in texts.values():
+        if not fake_user and not silent:
+            addSound("beep")
         for i in range(len(txt)):
             window.addstr(txt[i])
             window.refresh()
