@@ -82,7 +82,7 @@ LOCK_CONDS = {
 }
 
 LOGS = {
-    'Megaton           - Afterword': """USER: MOIRA BROWN
+    'Epilogue           - Afterword': """USER: MOIRA BROWN
 PASS: ***********
 
 Date: 09.10.2297
