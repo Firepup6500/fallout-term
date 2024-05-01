@@ -7,7 +7,7 @@
                 "backgroundImageStretchMode": "fill",
                 "colorScheme": "Fallout",
                 "experimental.retroTerminalEffect": true,
-                "font": 
+                "font":
                 {
                     "face": "Fixedsys Excelsior",
                     "size": 12.0
@@ -19,27 +19,48 @@
                 "opacity": 80,
                 "padding": "50"
             },
+            {
+                "adjustIndistinguishableColors": "never",
+                "backgroundImage": "C:\\Users\\Firepup Sixfifty\\Pictures\\WT\\Backgrounds\\fallout.png",
+                "backgroundImageAlignment": "center",
+                "backgroundImageOpacity": 0.8,
+                "backgroundImageStretchMode": "fill",
+                "colorScheme": "Fallout",
+                "commandline": "ubuntu.exe",
+                "experimental.retroTerminalEffect": true,
+                "font": 
+                {
+                    "face": "Fixedsys Excelsior",
+                    "size": 12.0
+                },
+                "guid": "{bf39d4af-04ab-447e-89be-7f7ee93cac8d}",
+                "hidden": false,
+                "icon": "C:\\Users\\Firepup Sixfifty\\Pictures\\WT\\Icons\\fallout.png",
+                "name": "Fallout (WSL)",
+                "opacity": 80,
+                "padding": "50"
+            },
 // Color profile
         {
             "background": "#000000",
-            "black": "#102D1F",
-            "blue": "#40AD5F",
-            "brightBlack": "#40AD5F",
-            "brightBlue": "#40AD5F",
-            "brightCyan": "#40AD5F",
-            "brightGreen": "#40AD5F",
-            "brightPurple": "#40AD5F",
-            "brightRed": "#40AD5F",
-            "brightWhite": "#40AD5F",
-            "brightYellow": "#40AD5F",
+            "black": "#1A1A1A",
+            "blue": "#008AB3",
+            "brightBlack": "#545454",
+            "brightBlue": "#2ECEFF",
+            "brightCyan": "#2EFFFF",
+            "brightGreen": "#1AFF80",
+            "brightPurple": "#802EFF",
+            "brightRed": "#FF2E6F",
+            "brightWhite": "#C0FFFF",
+            "brightYellow": "#FFB642",
             "cursorColor": "#40AD5F",
-            "cyan": "#40AD5F",
-            "foreground": "#40AD5F",
-            "green": "#40AD5F",
+            "cyan": "#00B3B3",
+            "foreground": "#1AFF80",
+            "green": "#00B350",
             "name": "Fallout",
-            "purple": "#40AD5F",
-            "red": "#40AD5F",
-            "selectionBackground": "#205D3F",
-            "white": "#40AD5F",
-            "yellow": "#40AD5F"
+            "purple": "#4C00C2",
+            "red": "#990030",
+            "selectionBackground": "#00B350",
+            "white": "#8AFFFF",
+            "yellow": "#CC7D00"
         },
