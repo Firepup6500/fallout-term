@@ -27,7 +27,6 @@ _playing = False
 
 _soundQueue = []
 
-global _queueRunning
 _queueRunning = False
 
 
@@ -129,7 +128,6 @@ def _playQueue():
     Internal use - play sounds from a queue
     """
     global _queueRunning
-    global _soundQueue
     if _queueRunning:
         return
     _queueRunning = True
@@ -161,7 +159,6 @@ def soundTest():
     addSound("poweron")
     addSound("poweroff")
     addSound("poweroff")
-    global _soundQueue
     while not queueIsEmpty():
         sleep(0.2)
 
@@ -170,7 +167,6 @@ def addSound(file):
     """
     Add sounds to the queue
     """
-    global _soundQueue
     if _soundCheck():
         _soundQueue.extend([file])
 

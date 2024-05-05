@@ -9,13 +9,9 @@ from fallout_functions import soundTest, queueIsEmpty, addSound
 from time import sleep
 import sys
 
-hard = False
-if "--hard" in sys.argv:
-    hard = True
+hard = "--hard" in sys.argv
 
-skip = False
-if "--skip" in sys.argv:
-    skip = True
+skip = "--skip" in sys.argv
 
 if "--preload" in sys.argv:
     soundTest()
